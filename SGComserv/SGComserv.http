@@ -1,0 +1,6 @@
+@SGComserv_HostAddress = http://0.0.0.0:5115
+
+GET {{SGComserv_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

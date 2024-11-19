@@ -1,0 +1,97 @@
+﻿using SGComserv.Enums;
+using SGComserv.Extensions;
+
+namespace SGComserv.Models;
+
+public class Empresa {
+    public int id { get; set; }
+    public string? nome { get; set; }
+    public string? Telefone { get; set; }
+    public string? Fax { get; set; }
+    public string? Endereco { get; set; }
+    public int IdEmpresaDesenvolvimento { get; set; }
+    public DateTime UltimoContasFixas { get; set; }
+    public int UltimaNotaFiscalEmitida { get; set; }
+    public int UltimoMDFeEmitido { get; set; }
+    public string? UltNSU { get; set; }
+    public double AliquotaICMS { get; set; }
+    public string? Mensagem { get; set; }
+    public int TipoRegime { get; set; }
+    public string? Cnpj { get; set; }
+    public string? CnpjSemFormatacao { get => string.IsNullOrEmpty(Cnpj) ? string.Empty : Cnpj.RemoveFormat(); }
+    public string? Ie { get; set; }
+    public string? NomeRua { get; set; }
+    public string? Numero { get; set; }
+    public string? Complemento { get; set; }
+    public string? Bairro { get; set; }
+    public string? Cidade { get; set; }
+    public string? Estado { get; set; }
+    public string? RazaoSocial { get; set; }
+    public string? InscricaoMunicipal { get; set; }
+    public string? Cnae { get; set; }
+    public string? Cep { get; set; }
+    public string? Pais { get; set; }
+    public byte[]? ImagemPadrao { get; set; }
+    public string? Observacoes { get; set; }
+    public string? Email { get; set; }
+    public string? site { get; set; }
+    public int TipoPessoa { get; set; }
+    public string? Validacao { get; set; }
+    public string? Logradouro { get; set; }
+    public byte[]? Logo { get; set; }
+    public int UltimoLoteNFe { get; set; }
+    public string? MsgImpressao1 { get; set; }
+    public string? MsgImpressao2 { get; set; }
+    public string? CnpjSastec { get; set; }
+    public string? Assinatura { get; set; }
+    public int Planodefundo { get; set; }
+    public int Modoplanodefundo { get; set; }
+    public string? MsgImpressaoPedido { get; set; }
+    public string? MsgImpressaoOrcamento { get; set; }
+    public int Homologacao { get; set; }
+    public string? contabil_RazaoSocial { get; set; }
+    public string? contabil_cnpj { get; set; }
+    public string? contabil_crc { get; set; }
+    public string? contabil_end_logradouro { get; set; }
+    public string? contabil_end_nomerua { get; set; }
+    public string? contabil_end_numero { get; set; }
+    public string? contabil_end_cep { get; set; }
+    public string? contabil_end_complemento { get; set; }
+    public string? contabil_end_bairro { get; set; }
+    public string? contabil_end_cidade { get; set; }
+    public string? contabil_end_estado { get; set; }
+    public string? contabil_email { get; set; }
+    public string? contabil_telefone { get; set; }
+    public string? contabil_fax { get; set; }
+    public string? DMunicipio { get; set; }
+    public int Cmunicipio { get; set; }
+    public int Cuf { get; set; }
+    public string? IdMunicipio { get; set; }
+    public string? Suf { get; set; }
+    public int CodigoPais { get; set; }
+    public decimal cofins { get; set; }
+    public decimal pis { get; set; }
+    public int ultimoNFCeEmitido { get; set; }
+    public string? vinco_IdKeyPartner { get; set; }
+    public string? vinco_PartnerAuthorizationToken { get; set; }
+    public string? vinco_IdKeyEmpresa { get; set; }
+    public string? vinco_IUC { get; set; }
+    public string? migrate_chaveAcesso { get; set; }
+    public int serieNFE { get; set; }
+    public bool habilitada { get; set; }
+    public int idBancoBoletoPadrao { get; set; }
+    public string? descricaoBancoBoletoPadrao { get; set; }
+    public int idBancoBoletoSecundario { get; set; }
+    public string? descricaoBancoBoletoSecundario { get; set; }
+    public ETipoEmpresa idTipoEmpresa { get; set; }
+    public int idTabelaVenda { get; set; }
+    public string? migrate_chaveAcesso_homologacao { get; set; }
+    public bool migrate_ambiente_homologacao { get; set; }
+    public int padraoEmissaoNFs { get; set; }
+    public string? serieNFS { get; set; }
+    public string? versaoLayoutSat { get; set; }
+    public int incCultural { get; set; }
+    public int UltimaNotaFiscalServicoEmitida { get; set; }
+    public int ultimoRPS { get; set; }
+    public int idModelo { get; set; }
+}
