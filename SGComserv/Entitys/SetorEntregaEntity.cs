@@ -1,7 +1,8 @@
-﻿namespace SGComserv.Models;
+﻿namespace SGComserv.Entitys;
 
-public class SetorEntrega {
-    public int id { get; set; }
+public class SetorEntregaEntity
+{
+    public int Id { get; set; }
     public string? Descricao { get; set; }
     public bool Entrega_seg { get; set; }
     public bool Entrega_ter { get; set; }
@@ -10,8 +11,10 @@ public class SetorEntrega {
     public bool Entrega_sex { get; set; }
     public bool Entrega_sab { get; set; }
     public bool Entrega_dom { get; set; }
-    public string DiasEntrega {
-        get {
+    public string DiasEntrega
+    {
+        get
+        {
             string dias = "";
             dias = dias + (Entrega_seg ? "1" : "");
             dias = dias + " " + (Entrega_ter ? "2" : "");

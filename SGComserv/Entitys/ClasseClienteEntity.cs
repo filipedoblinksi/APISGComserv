@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SGComserv.Models;
+namespace SGComserv.Entitys;
 
-public class ClasseCliente {
+public class ClasseClienteEntity
+{
     public int Id { get; set; }
     public string? Descricao { get; set; }
 }

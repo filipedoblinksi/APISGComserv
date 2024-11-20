@@ -1,8 +1,9 @@
 ﻿using SGComserv.Enums;
 
-namespace SGComserv.Models;
+namespace SGComserv.Entitys;
 
-public class Fornecedor {
+public class FornecedorEntity
+{
     public int id { get; set; }
     public string? fantasia { get; set; }
     public string? razaoSocial { get; set; }
@@ -18,8 +19,10 @@ public class Fornecedor {
     public int? end_cmun { get; set; }
     public string? end_cidade { get; set; }
     public string? end_estado { get; set; }
-    public string? enderecoCompleto {
-        get {
+    public string? enderecoCompleto
+    {
+        get
+        {
             return end_logradouro + " " + end_nomerua + ", " + end_numero + " " + end_complemento + " - " + end_bairro + " - " + end_cidade + " - " + end_estado + " - CEP: " + end_cep;
         }
 
@@ -31,7 +34,7 @@ public class Fornecedor {
     public string? end_logradouro { get; set; }
     public string? observacoes { get; set; }
     public int idClasse { get; set; }
-    public virtual ClasseFornecedor DadosClasseFornecedor { get; set; } = new ClasseFornecedor();
+    public virtual ClasseFornecedorEntity DadosClasseFornecedor { get; set; } = new ClasseFornecedorEntity();
     public string? inscricaoMunicipal { get; set; }
     public ETipoRegimeTributario regimeTributario { get; set; }
     public string? chavePix { get; set; }
@@ -52,22 +55,24 @@ public class Fornecedor {
     public decimal percentualFaturamento { get; set; }
     public decimal percentualRecebimento { get; set; }
     public int idEmpresa { get; set; }
-    public virtual Empresa DadosEmpresa { get; set; } = new Empresa();
+    public virtual EmpresaEntity DadosEmpresa { get; set; } = new EmpresaEntity();
     public int idTipoGasto { get; set; }
-    public virtual TipoGasto? DadosTipoGasto { get; set; }
+    public virtual TipoGastoEntity? DadosTipoGasto { get; set; }
     public int idCTipoPagamento { get; set; }
-    public virtual TipoDocumentoFinanceiro? DadosTipoDocumentoFinanceiro { get; set; }
+    public virtual TipoDocumentoFinanceiroEntity? DadosTipoDocumentoFinanceiro { get; set; }
     public string? IdPlanoFinanceiro { get; set; }
-    public virtual PlanoFinanceiro? DadosPlanoFinanceiro { get; set; }
+    public virtual PlanoFinanceiroEntity? DadosPlanoFinanceiro { get; set; }
     public string? observacoesPagamento { get; set; }
     public int idPais { get; set; }
     public bool inativo { get; set; }
     public string? idContabilFornecedor { get; set; }
-    public virtual PlanoContabil? DadosPlanoContabil { get; set; }
+    public virtual PlanoContabilEntity? DadosPlanoContabil { get; set; }
     public string? prazoPagamento { get; set; }
     public EFormaPagamento idFormaPagamento { get; set; }
-    public string? contatoFornecedor {
-        get {
+    public string? contatoFornecedor
+    {
+        get
+        {
             return fantasia + (!string.IsNullOrEmpty(telefone) && telefone.Replace(" ", "") != "()-" ? " - " + telefone : "") + (!string.IsNullOrEmpty(email) ? " - " + email : "");
         }
     }

@@ -1,7 +1,11 @@
-﻿namespace SGComserv.Models;
+﻿using System.ComponentModel.DataAnnotations;
 
-public class NivelSenha {
-    public string? Nivel { get; set; }
+namespace SGComserv.Entitys;
+
+public class NivelSenhaEntity
+{
+    [Key]
+    public string Nivel { get; set; } = string.Empty;
     public string? Modulo { get; set; }
     public string? SubModulo { get; set; }
     public string? Descricao { get; set; }

@@ -1,6 +1,7 @@
-﻿namespace SGComserv.Models;
+﻿namespace SGComserv.Entitys;
 
-public class Cidade {
+public class CidadeEntity
+{
     public int Id { get; set; }
     public string? Cuf { get; set; }
     public string? Suf { get; set; }
